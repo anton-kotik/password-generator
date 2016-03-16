@@ -1,0 +1,40 @@
+{
+    "name": "27cm/password-generator",
+    "description": "PHP library for generating easy to remember but hard to guess passwords",
+    "homepage": "https://github.com/27cm/password-generator",
+    "keywords": [
+        "password",
+        "xkcd"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anton Zakharov",
+            "email": "avti1308@yandex.ru",
+			"homepage": "http://hello-world.pw",
+			"role": "Founder and project lead"
+        }
+    ],
+    "support": {
+        "email": "avti1308@yandex.ru",
+        "issues": "https://github.com/27cm/password-generator/issues?state=open",
+		"source": "https://github.com/27cm/password-generator"
+    },
+    "require": {
+        "php": ">=5.6.0",
+        "paragonie/random_compat": "^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "TwentySeven\\Password\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TwentySevenTest\\Password\\": "test/"
+        }
+    }
+}
