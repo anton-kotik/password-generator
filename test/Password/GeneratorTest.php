@@ -3,36 +3,36 @@
 namespace TwentySevenTest\Password;
 
 use PHPUnit_Framework_TestCase as TestCase;
+use PHPUnit_Framework_MockObject_MockObject as MockObject;
 
 use TwentySeven\Password\Generator;
+use TwentySeven\Password\WordListInterface;
+
+use TwentySevenTest\Password\WordList\TestWordList;
 
 class GeneratorTest extends TestCase
 {
     public function testWordListCalled()
     {
-        $list = $this->getMockForAbstractClass('TwentySeven\Password\WordListInterface');
-        $list->expects($this->exactly(5))->method('get');
+        $list1 = $this->createWordListMock();
+        $list1->expects($this->exactly(5))->method('get');
 
-        $generator = new Generator($list);
+        $generator = new Generator($list1);
         $generator->generate(5);
-    }
 
-    public function testWordListArrayCalled()
-    {
-        $list1 = $this->getMockForAbstractClass('TwentySeven\Password\WordListInterface');
-        $list1->expects($this->exactly(2))->method('get');
+        $list2 = $this->createWordListMock();
+        $list2->expects($this->exactly(2))->method('get');
 
-        $list2 = $this->getMockForAbstractClass('TwentySeven\Password\WordListInterface');
-        $list2->expects($this->exactly(1))->method('get');
+        $list3 = $this->createWordListMock();
+        $list3->expects($this->exactly(1))->method('get');
 
-        $generator = new Generator([$list1, $list2]);
+        $generator = new Generator([$list2, $list3]);
         $generator->generate(3);
     }
 
     public function testSeparator()
     {
-        $list = $this->getMockForAbstractClass('TwentySeven\Password\WordListInterface');
-        $list->expects($this->any())->method('get')->will($this->returnValue('test'));
+        $list = new TestWordList();
 
         $generator = new Generator($list);
         $password = $generator->generate(4, '-');
@@ -62,5 +62,13 @@ class GeneratorTest extends TestCase
     {
         $password = Generator::generateRuTranslit(4, ' ');
         $this->assertNotEmpty($password);
+    }
+
+    /**
+     * @return WordListInterface|MockObject
+     */
+    protected function createWordListMock()
+    {
+        return $this->getMockForAbstractClass(WordListInterface::class);
     }
 }
