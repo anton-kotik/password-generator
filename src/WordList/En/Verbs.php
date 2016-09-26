@@ -2,14 +2,14 @@
 
 namespace TwentySeven\Password\WordList\En;
 
-use TwentySeven\Password\WordList\StaticArray;
+use TwentySeven\Password\WordList\AbstractStaticArray;
 
 /**
  * English verbs word list.
  *
  * List of 2048 most frequesntly used english verbs.
  */
-class Verbs extends StaticArray
+class Verbs extends AbstractStaticArray
 {
     /**
      * {@inheritdoc}

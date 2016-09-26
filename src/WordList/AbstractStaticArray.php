@@ -7,7 +7,7 @@ use TwentySeven\Password\WordListInterface;
 /**
  * Word list stored in static array.
  */
-abstract class StaticArray implements WordListInterface
+abstract class AbstractStaticArray implements WordListInterface
 {
     /**
      * @var array Array of words.

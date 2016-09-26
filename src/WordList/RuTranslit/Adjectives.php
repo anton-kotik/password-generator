@@ -2,14 +2,14 @@
 
 namespace TwentySeven\Password\WordList\RuTranslit;
 
-use TwentySeven\Password\WordList\StaticArray;
+use TwentySeven\Password\WordList\AbstractStaticArray;
 
 /**
  * Russian transliterated adjectives word list.
  *
  * List of 2048 transliterated most frequesntly used russian adjectives
  */
-class Adjectives extends StaticArray
+class Adjectives extends AbstractStaticArray
 {
     /**
      * {@inheritdoc}

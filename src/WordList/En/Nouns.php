@@ -2,14 +2,14 @@
 
 namespace TwentySeven\Password\WordList\En;
 
-use TwentySeven\Password\WordList\StaticArray;
+use TwentySeven\Password\WordList\AbstractStaticArray;
 
 /**
  * English nouns word list.
  *
  * List of 2048 most frequesntly used english nouns.
  */
-class Nouns extends StaticArray
+class Nouns extends AbstractStaticArray
 {
     /**
      * {@inheritdoc}

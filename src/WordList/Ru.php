@@ -7,7 +7,7 @@ namespace TwentySeven\Password\WordList;
  *
  * List of 2048 most frequesntly used russian words.
  */
-class Ru extends StaticArray
+class Ru extends AbstractStaticArray
 {
     /**
      * {@inheritdoc}

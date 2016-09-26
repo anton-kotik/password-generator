@@ -2,14 +2,14 @@
 
 namespace TwentySeven\Password\WordList\En;
 
-use TwentySeven\Password\WordList\StaticArray;
+use TwentySeven\Password\WordList\AbstractStaticArray;
 
 /**
  * English adjectives word list.
  *
  * List of 2048 most frequesntly used english adjectives.
  */
-class Adjectives extends StaticArray
+class Adjectives extends AbstractStaticArray
 {
     /**
      * {@inheritdoc}

@@ -2,14 +2,14 @@
 
 namespace TwentySeven\Password\WordList\Ru;
 
-use TwentySeven\Password\WordList\StaticArray;
+use TwentySeven\Password\WordList\AbstractStaticArray;
 
 /**
  * Russian verbs word list.
  *
  * List of 2048 most frequesntly used russian verbs.
  */
-class Verbs extends StaticArray
+class Verbs extends AbstractStaticArray
 {
     /**
      * {@inheritdoc}

@@ -2,14 +2,14 @@
 
 namespace TwentySeven\Password\WordList\RuTranslit;
 
-use TwentySeven\Password\WordList\StaticArray;
+use TwentySeven\Password\WordList\AbstractStaticArray;
 
 /**
  * Russian transliterated verbs word list.
  *
  * List of 2048 transliterated most frequesntly used russian verbs
  */
-class Verbs extends StaticArray
+class Verbs extends AbstractStaticArray
 {
     /**
      * {@inheritdoc}

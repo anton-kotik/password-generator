@@ -7,7 +7,7 @@ namespace TwentySeven\Password\WordList;
  *
  * List of 2048 most frequesntly used english words.
  */
-class En extends StaticArray
+class En extends AbstractStaticArray
 {
     /**
      * {@inheritdoc}

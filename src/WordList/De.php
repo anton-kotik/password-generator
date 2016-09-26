@@ -7,7 +7,7 @@ namespace TwentySeven\Password\WordList;
  *
  * List of 2048 most frequently used german words.
  */
-class De extends StaticArray
+class De extends AbstractStaticArray
 {
     /**
      * {@inheritdoc}
